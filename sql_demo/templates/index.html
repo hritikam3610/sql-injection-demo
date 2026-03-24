@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SQL Injection Demo</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<body>
+
+<h1 class="title">SQL Injection Demo</h1>
+
+<div class="container">
+
+    <div class="box red">
+        <form action="/vulnerable_login" method="post">
+            <h2>Vulnerable Login ❌</h2>
+            <input type="text" name="username" placeholder="Username">
+            <input type="password" name="password" placeholder="Password">
+            <button type="submit">Login</button>
+        </form>
+    </div>
+
+    <div class="box green">
+        <form action="/secure_login" method="post">
+            <h2>Secure Login ✅</h2>
+            <input type="text" name="username" placeholder="Username">
+            <input type="password" name="password" placeholder="Password">
+            <button type="submit">Login</button>
+        </form>
+    </div>
+
+</div>
+
+</body>
+</html>
